@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classification Report</title>
+</head>
+<body>
+    <h1>Classification Report</h1>
+    <p>{{ report }}</p>
+    <img src="{{ url_for('uploaded_file', filename=image_filename) }}" alt="Uploaded Image">
+    
+    <h2>Prediction Probabilities:</h2>
+    <ul>
+        <li>Not Infected: {{ probabilities[0] }}</li>
+        <li>Infected: {{ probabilities[1] }}</li>
+    </ul>
+</body>
+</html>
